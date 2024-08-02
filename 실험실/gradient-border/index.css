@@ -1,0 +1,36 @@
+.wrap {
+  display: flex;
+  gap: 10px;
+}
+.box {
+  width: 300px;
+  height: 200px;
+  border: 10px solid transparent;
+  padding: 10px;
+  border-radius: 10px;
+  background-image: linear-gradient(#fff, #fff),
+    linear-gradient(to left bottom, red, blue);
+  background-clip: content-box, border-box;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-origin: border-box;
+}
+.box1 {
+  background-origin: padding-box;
+}
+
+.box2 {
+  background-origin: content-box;
+}
+
+.box3 {
+  background-origin: border-box;
+}
+
+.box4 {
+  background-origin: padding-box;
+}
+.wrap > div > p {
+  margin: 0;
+  text-align: center;
+}

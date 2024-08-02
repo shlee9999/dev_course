@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>study</title>
+    <script src="./index.js" defer></script>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-size: 20px;
+      }
+      em {
+        color: chocolate;
+      }
+      em.over {
+        text-decoration: underline;
+        background-color: tomato;
+      }
+      .cursor {
+        border: 5px solid lightblue;
+        position: absolute;
+        transform: translate(100px, 100px);
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        z-index: -1;
+      }
+      .active {
+        background-color: aqua;
+        transform: translate() scale(3);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="cursor active"></div>
+    <main>
+      <article>위쪽영역</article>
+      <article>
+        <p>
+          Lorem ipsum dolor sit amet
+          <em class="over">consectetur adipisicing elit.</em> Dolorum, eum
+          magni. <em>Exercitationem</em> quia quidem doloremque quisquam aut
+          delectus perspiciatis unde quaerat
+          <em class="over">consequatur</em> maiores, sed quod, sint rem, exF
+          tempora eos.
+        </p>
+      </article>
+      <article class="coord">
+        <p>x좌표 <span></span></p>
+        <p>y좌표 <span></span></p>
+      </article>
+    </main>
+    <script>
+      const $cursor = document.querySelector('.cursor');
+      let translate = `translate(calc(${e.pageX}px - 50%), calc(${e.pageY}px - 50%))`;
+      document.addEventListener('mousemove', function (e) {
+        $cursor.style.transform = `translate(calc(${e.pageX}px - 50%), calc(${e.pageY}px - 50%))`;
+      });
+      const $overs = document.querySelectorAll('.over');
+      console.log('over');
+      $overs.forEach(($over) => {
+        $over.addEventListener('mouseenter', function (e) {
+          console.log('enter');
+          $cursor.classList.add('active');
+        });
+        $over.addEventListener('mouseleave', function (e) {
+          console.log('leave');
+          $cursor.classList.remove('active');
+        });
+      });
+    </script>
+  </body>
+</html>

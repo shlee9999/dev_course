@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+    <title></title>
+    <script src="./index.js" defer></script>
+  </head>
+  <body>
+    <button class="btn1">0</button>
+    <button class="btn2">0</button>
+  </body>
+  <script>
+    const $button1 = document.querySelector('.btn1');
+    const $button2 = document.querySelector('.btn2');
+    $button1.onclick = function (e) {
+      console.log(this); // $button1
+      console.log(e.currentTarget); // $button1
+      console.log(this === e.currentTarget); // true
+    };
+    $button2.addEventListener('click', function (e) {
+      console.log(this); // $button2
+      console.log(e.currentTarget); // $button2
+      console.log(this === e.currentTarget); // true
+    });
+  </script>
+</html>

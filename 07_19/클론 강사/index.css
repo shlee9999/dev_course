@@ -1,0 +1,275 @@
+@charset 'utf-8';
+
+:root {
+  font-size: 16px;
+  --gap1: 4px;
+  --gap5: 64px;
+  --p-color1: #50a4e5;
+  --g1: #333;
+  --g2: #666;
+  --g3: #999;
+  --g4: #eaeaea;
+  --mw: 1300px;
+}
+body {
+  background-color: #eaeaeabb;
+}
+.mw {
+  max-width: var(--mw);
+  width: calc(100% - var(--gap5));
+  margin: auto;
+}
+
+/* .wrap {
+  overflow: hidden;
+} */
+
+/* header start */
+.hd {
+  background-color: rgba(255, 255, 2555, 0.5);
+  border-bottom: 1px solid var(--g4);
+  /* padding: var(--gap1) calc(var(--gap1) * 2); */
+  padding: 0 2rem;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 999;
+}
+.hd nav,
+.hd .sub,
+.hd .person {
+  display: flex;
+}
+.hd nav a {
+  display: block;
+  white-space: nowrap;
+}
+
+.hd nav {
+  justify-content: space-between;
+  align-items: center;
+}
+.hd nav > * {
+  border: 1px solid red;
+}
+.hd h1 a {
+  border: 1px solid blue;
+  width: 80px;
+  height: 80px;
+  background: url('./img/logo.png') no-repeat center;
+  background-size: contain;
+  color: transparent;
+}
+
+@media (min-width: 1201px) {
+  .hd .gnb {
+    display: flex;
+    flex: 1;
+  }
+  /* .gnb::before  */
+  /* content: "여기"; */
+  .gnbWrap {
+    flex: 1;
+    display: flex;
+  }
+  .gnbBg {
+    position: absolute;
+    width: 100%;
+    background-color: #f5f2e9;
+    top: 80px;
+    left: 0;
+    height: 0;
+    transition: 0.3s;
+  }
+  .gnb:hover + .gnbBg {
+    height: 40px;
+  }
+
+  .hd .gnb > li {
+  }
+  .hd .gnb > li > a {
+    border: 1px solid green;
+    padding: 0 2rem;
+    height: 80px;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    position: relative;
+    transition: 0.3s;
+  }
+  .hd .gnb > li > a::before {
+    content: '';
+    display: block;
+    width: 5px;
+    height: 8px;
+    border: 1px solid white;
+    border-radius: 3px;
+    position: absolute;
+    right: 2rem;
+    top: 50%;
+    transform: translateY(-20px);
+    opacity: 0;
+    transition: 0.3s;
+  }
+  .hd .gnb > li:hover > a {
+    color: #50a4e5;
+  }
+  .hd .gnb > li:hover > a::before {
+    transform: translateY(-30px);
+    opacity: 1;
+  }
+
+  .hd .sub {
+    border: 1px solid red;
+    position: absolute;
+    height: 0;
+    overflow: hidden;
+    transition: 0.3s;
+    z-index: 10;
+  }
+  .hd .gnb > li:hover .sub {
+    height: 40px;
+  }
+
+  .hd .gnb > li:nth-of-type(5) .sub {
+    transform: translateX(-35%);
+  }
+  .hd .gnb > li:nth-of-type(2) .sub,
+  .hd .gnb > li:nth-of-type(3) .sub,
+  .hd .gnb > li:nth-of-type(4) .sub {
+    transform: translateX(-30%);
+  }
+
+  .hd .sub li {
+  }
+  .hd .sub a {
+    padding: 0.5rem 1rem;
+    font-size: 0.75rem;
+  }
+  .hd .sub li:hover a {
+  }
+}
+
+.hd .person > * {
+  border: 1px solid green;
+  padding: 0.5rem;
+}
+.hd .person button {
+  background-color: transparent;
+  outline: none;
+}
+
+@media (max-width: 1200px) {
+  .hd h1,
+  .hd .person {
+    position: relative;
+    z-index: 10;
+  }
+  .hd .gnb {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    top: 0;
+    left: 0;
+    padding: 100px 2rem 0 2rem;
+  }
+
+  .hd .gnb.on {
+    display: block;
+  }
+}
+
+/*  */
+
+main {
+  height: 300vh;
+}
+.sec {
+  height: 100vh;
+}
+.sec1 {
+  height: 100vh;
+  background: url('./img/image2_1.jfif') center/cover;
+  background-color: tomato;
+}
+
+.sec1 h2 {
+  position: absolute;
+  top: 80px;
+  left: 50%;
+  background-color: var(--p-color1);
+  width: 30%;
+  height: 300px;
+}
+
+.sec1 button {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background: var(--g4) url('./img/ico_scroll.png') no-repeat center;
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 50%;
+  color: transparent;
+}
+
+/* SEC2 */
+
+._inner {
+  border: 1px solid red;
+}
+
+.sec2 {
+  display: flex;
+  border: 2px solid teal;
+}
+.sec2 > * {
+  border: 1px solid green;
+}
+
+.sec2 ._inner > * {
+  border: 1px solid lightblue;
+}
+.sec2 ._inner {
+  display: flex;
+  flex-wrap: wrap;
+}
+.banner1 {
+  background: url('./img/image2_2.jfif') center/cover no-repeat;
+  padding: 100px 2rem;
+}
+.banner2 {
+  /* background: url(); */
+}
+
+.sec2 .banner1 a {
+  display: inline-block;
+  background-color: white;
+  border-radius: 25px;
+  padding: 1rem 3rem 1rem 1rem;
+}
+
+.sec2 .banner2 {
+  width: calc(30%-1rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--p-color1);
+}
+.sec2 h2 {
+  text-align: center;
+  font-size: 2rem;
+  width: 100%;
+  line-height: 1.25;
+  padding: 1rem 0;
+}
+.sec2 .banner2 .icon {
+  width: 200px;
+}
+.sec2 .banner2 .icon img {
+  width: 100%;
+}

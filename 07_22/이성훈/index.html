@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- inter font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- swiper -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <!-- css -->
+    <link rel="stylesheet" href="./myreset.css" />
+    <link rel="stylesheet" href="./css/root.css" />
+    <link rel="stylesheet" href="./css/components.css" />
+    <link rel="stylesheet" href="./css/header.css" />
+    <link rel="stylesheet" href="./css/banner_sec.css" />
+    <link rel="stylesheet" href="./css/font.css" />
+    <link rel="stylesheet" href="./css/service_sec.css" />
+    <link rel="stylesheet" href="./css/dev_sec.css" />
+    <link rel="stylesheet" href="./css/coll_sec.css" />
+    <link rel="stylesheet" href="./css/cust_sec.css" />
+    <link rel="stylesheet" href="./css/footer.css" />
+    <link rel="stylesheet" href="./css/modal.css" />
+    <!-- title -->
+    <title>Clone</title>
+    <script src="./js/index.js" defer></script>
+    <script src="./js/serviceSwiper.js" defer></script>
+    <script src="./js/collSwiper.js" defer></script>
+    <script src="./js/custSwiper.js" defer></script>
+    <script src="./js/modal.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <div class="inner-wrap">
+        <h1><img src="./img/header_logo.svg" alt="brand_logo" /></h1>
+        <nav>
+          <div class="modal-wrapper" onclick="closeHambModal()"></div>
+          <div class="hamb-modal">
+            <ul class="gnb">
+              <li><a>About us</a></li>
+              <li><a>Services</a></li>
+              <li><a>Case Studies</a></li>
+              <li><a>Blog</a></li>
+              <li><a>How it Works</a></li>
+              <li><a>Hire</a></li>
+            </ul>
+            <button class="hamb_modal_close-btn" onclick="closeHambModal()">
+              <img src="./img/close_btn.svg" alt="close_btn" />
+            </button>
+          </div>
+          <ul class="gnb">
+            <li><a>About us</a></li>
+            <li><a>Services</a></li>
+            <li><a>Case Studies</a></li>
+            <li><a>Blog</a></li>
+            <li><a>How it Works</a></li>
+            <li><a>Hire</a></li>
+          </ul>
+        </nav>
+        <div class="right-con">
+          <button class="contact-btn">Contact us</button>
+          <button class="hamb-btn" onclick="openHambModal()">
+            <img src="./img/Hamburger_icon.png" alt="hamb-btn" />
+          </button>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="banner_sec">
+        <h2>
+          Great <span class="grad-text">software</span> is
+          <p>built by great <span class="grad-text">teams</span></p>
+        </h2>
+        <p>
+          We help build and manage a team of world-class developers to bring
+          your vision to life
+        </p>
+        <button class="main-start-btn">Let’s get started!</button>
+      </section>
+      <section class="service_sec">
+        <div class="inner_wrap">
+          <div class="circle"></div>
+          <div class="circle"></div>
+          <h2>Services we offer</h2>
+          <div class="swiper serviceSwiper">
+            <div class="swiper-wrapper service">
+              <div class="swiper-slide service-card">
+                <div class="inner_wrap">
+                  <span class="border-gradient">
+                    <img
+                      src="./img/Code_perspective_matte.svg"
+                      alt="code_perspective_img"
+                    />
+                  </span>
+                  <!-- 선택될 시 변화 -->
+                  <h3 class="grad-text">Web Design & Development</h3>
+                  <p>
+                    A Website is an extension of yourself and we can help you to
+                    express it properly. Your website is your number one
+                    marketing asset because we live in a digital age.
+                  </p>
+                </div>
+              </div>
+              <div class="swiper-slide service-card">
+                <div class="inner_wrap">
+                  <span class="border-gradient">
+                    <img
+                      src="./img/Dashboard_perspective_matte.svg"
+                      alt="code_perspective_img"
+                    />
+                  </span>
+                  <!-- 선택될 시 변화 -->
+                  <h3 class="grad-text">Web Design & Development</h3>
+                  <p>
+                    A Website is an extension of yourself and we can help you to
+                    express it properly. Your website is your number one
+                    marketing asset because we live in a digital age.
+                  </p>
+                </div>
+              </div>
+              <div class="swiper-slide service-card">
+                <div class="inner_wrap">
+                  <span class="border-gradient">
+                    <img
+                      src="./img/Code_perspective_matte.svg"
+                      alt="code_perspective_img"
+                    />
+                  </span>
+                  <!-- 선택될 시 변화 -->
+                  <h3 class="grad-text">Web Design & Development</h3>
+                  <p>
+                    A Website is an extension of yourself and we can help you to
+                    express it properly. Your website is your number one
+                    marketing asset because we live in a digital age.
+                  </p>
+                </div>
+              </div>
+              <div class="swiper-slide service-card">
+                <div class="inner_wrap">
+                  <span class="border-gradient">
+                    <img
+                      src="./img/Dashboard_perspective_matte.svg"
+                      alt="code_perspective_img"
+                    />
+                  </span>
+                  <!-- 선택될 시 변화 -->
+                  <h3 class="grad-text">Web Design & Development</h3>
+                  <p>
+                    A Website is an extension of yourself and we can help you to
+                    express it properly. Your website is your number one
+                    marketing asset because we live in a digital age.
+                  </p>
+                </div>
+              </div>
+              <div class="swiper-slide service-card">
+                <div class="inner_wrap">
+                  <span class="border-gradient">
+                    <img
+                      src="./img/Code_perspective_matte.svg"
+                      alt="code_perspective_img"
+                    />
+                  </span>
+                  <!-- 선택될 시 변화 -->
+                  <h3 class="grad-text">Web Design & Development</h3>
+                  <p>
+                    A Website is an extension of yourself and we can help you to
+                    express it properly. Your website is your number one
+                    marketing asset because we live in a digital age.
+                  </p>
+                </div>
+              </div>
+              <div class="swiper-slide service-card">
+                <div class="inner_wrap">
+                  <span class="border-gradient">
+                    <img
+                      src="./img/Dashboard_perspective_matte.svg"
+                      alt="code_perspective_img"
+                    />
+                  </span>
+                  <!-- 선택될 시 변화 -->
+                  <h3 class="grad-text">Web Design & Development</h3>
+                  <p>
+                    A Website is an extension of yourself and we can help you to
+                    express it properly. Your website is your number one
+                    marketing asset because we live in a digital age.
+                  </p>
+                </div>
+              </div>
+              <div class="swiper-slide service-card">
+                <div class="inner_wrap">
+                  <span class="border-gradient">
+                    <img
+                      src="./img/Code_perspective_matte.svg"
+                      alt="code_perspective_img"
+                    />
+                  </span>
+                  <!-- 선택될 시 변화 -->
+                  <h3 class="grad-text">Web Design & Development</h3>
+                  <p>
+                    A Website is an extension of yourself and we can help you to
+                    express it properly. Your website is your number one
+                    marketing asset because we live in a digital age.
+                  </p>
+                </div>
+              </div>
+              <div class="swiper-slide service-card">
+                <div class="inner_wrap">
+                  <span class="border-gradient">
+                    <img
+                      src="./img/Dashboard_perspective_matte.svg"
+                      alt="code_perspective_img"
+                    />
+                  </span>
+                  <!-- 선택될 시 변화 -->
+                  <h3 class="grad-text">Web Design & Development</h3>
+                  <p>
+                    A Website is an extension of yourself and we can help you to
+                    express it properly. Your website is your number one
+                    marketing asset because we live in a digital age.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-pagination service"></div>
+          </div>
+        </div>
+      </section>
+      <section class="dev_sec">
+        <div class="left-box">
+          <div class="jumbotron">
+            <h2>Leading companies trust us</h2>
+            <p>to develop software</p>
+          </div>
+          <p>
+            We <span class="grad-text">add development capacity</span> to tech
+            teams. Our value isn’t limited to building teams but is equally
+            distributed across the project lifecycle. We are a custom software
+            development company that guarantees the successful delivery of your
+            project.
+          </p>
+          <a href="#"
+            >See more Informations <img src="./img/right_arrow.svg" alt=""
+          /></a>
+        </div>
+        <div class="right-box">
+          <iframe
+            width="100%"
+            height="100%"
+            src="https://www.youtube.com/embed/zl8JJXXC6N8?si=HGgRTgxPpGod7SAA"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </section>
+      <section class="coll_sec">
+        <div class="jumbotron">
+          <h2>Meet the People</h2>
+          <p>We are Working With</p>
+        </div>
+        <div class="float_wrap">
+          <div class="swiper collSwiper">
+            <div class="swiper-wrapper coll">
+              <img
+                src="./img/logo1.svg"
+                alt="logo1"
+                class="swiper-slide coll"
+              />
+              <img
+                src="./img/logo2.svg"
+                alt="logo2"
+                class="swiper-slide coll"
+              />
+              <img
+                src="./img/logo3.svg"
+                alt="logo3"
+                class="swiper-slide coll"
+              />
+              <img
+                src="./img/logo4.svg"
+                alt="logo4"
+                class="swiper-slide coll"
+              />
+              <img
+                src="./img/logo5.svg"
+                alt="logo5"
+                class="swiper-slide coll"
+              />
+              <img
+                src="./img/logo6.svg"
+                alt="logo6"
+                class="swiper-slide coll"
+              />
+              <img
+                src="./img/logo7.svg"
+                alt="logo7"
+                class="swiper-slide coll"
+              />
+              <img
+                src="./img/logo1.svg"
+                alt="logo1"
+                class="swiper-slide coll"
+              />
+              <img
+                src="./img/logo2.svg"
+                alt="logo2"
+                class="swiper-slide coll"
+              />
+              <img
+                src="./img/logo3.svg"
+                alt="logo3"
+                class="swiper-slide coll"
+              />
+              <img
+                src="./img/logo4.svg"
+                alt="logo4"
+                class="swiper-slide coll"
+              />
+              <img
+                src="./img/logo5.svg"
+                alt="logo5"
+                class="swiper-slide coll"
+              />
+              <img
+                src="./img/logo6.svg"
+                alt="logo6"
+                class="swiper-slide coll"
+              />
+              <img
+                src="./img/logo7.svg"
+                alt="logo7"
+                class="swiper-slide coll"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="swiper-button-con">
+          <div class="swiper-button-prev coll"></div>
+          <div class="swiper-button-next coll"></div>
+        </div>
+      </section>
+      <section class="cust_sec">
+        <div class="jumbotron center">
+          <h2>Why cutomers love</h2>
+          <p>working with us</p>
+        </div>
+        <p>
+          Without any doubt I recommend Alcaline Solutions as one of the best
+          web design and digital marketing agencies. One of the best agencies
+          I’ve came across so far. Wouldn’t be hesitated to introduce their work
+          to someone else.
+        </p>
+        <div class="swiper custSwiper">
+          <div class="swiper-wrapper cust">
+            <div class="swiper-slide cust">
+              <!-- <img src="./img/avatar1.svg" alt="avatar1" /> -->
+              <img src="./img/avatar1.jpg" alt="avatar1" />
+              <div class="star-list">
+                <img src="./img/Star_perspective_matte.svg" alt="star" />
+                <img src="./img/Star_perspective_matte.svg" alt="star" />
+                <img src="./img/Star_perspective_matte.svg" alt="star" />
+                <img src="./img/Star_perspective_matte.svg" alt="star" />
+                <img src="./img/Star_perspective_matte.svg" alt="star" />
+              </div>
+              <span class="cust_name">Romeena De Silva</span>
+              <span class="cosmetics">Janet Cosmetics</span>
+            </div>
+
+            <div class="swiper-slide cust">
+              <!-- <img src="./img/avatar2.svg" alt="avatar1" /> -->
+              <img src="./img/avatar2.jpg" alt="avatar2" />
+              <div class="star-list">
+                <img src="./img/Star_perspective_matte.svg" alt="star" />
+                <img src="./img/Star_perspective_matte.svg" alt="star" />
+                <img src="./img/Star_perspective_matte.svg" alt="star" />
+                <img src="./img/Star_perspective_matte.svg" alt="star" />
+                <img src="./img/Star_perspective_matte.svg" alt="star" />
+              </div>
+              <span class="cust_name">Romeena De Silva</span>
+              <span class="cosmetics">Janet Cosmetics</span>
+            </div>
+
+            <div class="swiper-slide cust">
+              <!-- <img src="./img/avatar5.svg" alt="avatar1" /> -->
+              <img src="./img/avatar3.jpg" alt="avatar3" />
+              <div class="star-list">
+                <img src="./img/Star_perspective_matte.svg" alt="star" />
+                <img src="./img/Star_perspective_matte.svg" alt="star" />
+                <img src="./img/Star_perspective_matte.svg" alt="star" />
+                <img src="./img/Star_perspective_matte.svg" alt="star" />
+                <img src="./img/Star_perspective_matte.svg" alt="star" />
+              </div>
+              <span class="cust_name">Romeena De Silva</span>
+              <span class="cosmetics">Janet Cosmetics</span>
+            </div>
+
+            <div class="swiper-slide cust">
+              <!-- <img src="./img/avatar4.svg" alt="avatar1" /> -->
+              <img src="./img/avatar4.jpg" alt="avatar4" />
+              <div class="star-list">
+                <img src="./img/Star_perspective_matte.svg" alt="star" />
+                <img src="./img/Star_perspective_matte.svg" alt="star" />
+                <img src="./img/Star_perspective_matte.svg" alt="star" />
+                <img src="./img/Star_perspective_matte.svg" alt="star" />
+                <img src="./img/Star_perspective_matte.svg" alt="star" />
+              </div>
+              <span class="cust_name">Romeena De Silva</span>
+              <span class="cosmetics">Janet Cosmetics</span>
+            </div>
+
+            <div class="swiper-slide cust">
+              <!-- <img src="./img/avatar5.svg" alt="avatar1" /> -->
+              <img src="./img/avatar5.jpg" alt="avatar5" />
+              <div class="star-list">
+                <img src="./img/Star_perspective_matte.svg" alt="star" />
+                <img src="./img/Star_perspective_matte.svg" alt="star" />
+                <img src="./img/Star_perspective_matte.svg" alt="star" />
+                <img src="./img/Star_perspective_matte.svg" alt="star" />
+                <img src="./img/Star_perspective_matte.svg" alt="star" />
+              </div>
+              <span class="cust_name">Romeena De Silva</span>
+              <span class="cosmetics">Janet Cosmetics</span>
+            </div>
+            <div class="swiper-slide cust">
+              <!-- <img src="./img/avatar5.svg" alt="avatar1" /> -->
+              <img src="./img/avatar1.jpg" alt="avatar1" />
+              <div class="star-list">
+                <img src="./img/Star_perspective_matte.svg" alt="star" />
+                <img src="./img/Star_perspective_matte.svg" alt="star" />
+                <img src="./img/Star_perspective_matte.svg" alt="star" />
+                <img src="./img/Star_perspective_matte.svg" alt="star" />
+                <img src="./img/Star_perspective_matte.svg" alt="star" />
+              </div>
+              <span class="cust_name">Romeena De Silva</span>
+              <span class="cosmetics">Janet Cosmetics</span>
+            </div>
+            <div class="swiper-slide cust">
+              <!-- <img src="./img/avatar5.svg" alt="avatar1" /> -->
+              <img src="./img/avatar2.jpg" alt="avatar2" />
+              <div class="star-list">
+                <img src="./img/Star_perspective_matte.svg" alt="star" />
+                <img src="./img/Star_perspective_matte.svg" alt="star" />
+                <img src="./img/Star_perspective_matte.svg" alt="star" />
+                <img src="./img/Star_perspective_matte.svg" alt="star" />
+                <img src="./img/Star_perspective_matte.svg" alt="star" />
+              </div>
+              <span class="cust_name">Romeena De Silva</span>
+              <span class="cosmetics">Janet Cosmetics</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="swiper-button-next cust"></div>
+        <div class="swiper-button-prev cust"></div>
+      </section>
+      <!--<section>
+        <div class="jumbotron">
+          <h2></h2>
+          <p></p>
+        </div>
+      </section>
+      <section>
+        <div class="jumbotron">
+          <h2></h2>
+          <p></p>
+        </div>
+      </section>
+      <section>
+        <div class="jumbotron">
+          <h2></h2>
+          <p></p>
+        </div>
+      </section>
+      <section>
+        <div class="jumbotron">
+          <h2></h2>
+          <p></p>
+        </div>
+      </section>
+      <section>
+        <div class="jumbotron">
+          <h2></h2>
+          <p></p>
+        </div>
+      </section>
+      <section>
+        <div class="jumbotron">
+          <h2></h2>
+          <p></p>
+        </div>
+      </section> -->
+    </main>
+    <footer>© 2023 Copyright by Agency Solutions. All rights reserved.</footer>
+    <!-- swiper script -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  </body>
+</html>

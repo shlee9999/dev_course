@@ -1,0 +1,73 @@
+/* perspective 연습 */
+
+.con2 {
+  border: 1px solid red;
+  width: 300px;
+  height: 300px;
+  margin: 50px;
+  perspective: 900px;
+}
+.item {
+  border: 10px solid lightgray;
+  height: 100%;
+  background-color: antiquewhite;
+  transform-style: preserve-3d;
+  transform: rotateX(45deg);
+}
+.item > p {
+  border: 5px solid blue;
+  height: 100%;
+  transform: rotateY(45deg);
+}
+/* 카드 뒤집기 */
+.card {
+  transition: 0.3s;
+  flex: 1;
+  position: relative;
+  padding-top: 40%;
+  perspective: 900px;
+}
+.card > p {
+  /* front, back 공통 속성 */
+  border-radius: 1rem;
+  position: absolute;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  backface-visibility: hidden;
+  transition: 0.3s;
+}
+
+section {
+  display: flex;
+  width: 80%;
+  margin: auto;
+  gap: 1rem;
+}
+
+section img {
+  width: 50%;
+}
+
+.front {
+  z-index: 10;
+  background-image: url('./img/line.png');
+  background-color: antiquewhite;
+  filter: grayscale(1);
+}
+.back {
+  background-color: rgb(249, 254, 229);
+  transform: rotateY(-180deg);
+}
+
+.card:hover .front {
+  filter: grayscale(0);
+  transform: rotateY(-180deg);
+}
+
+.card:hover .back {
+  transform: rotateY(0deg);
+}

@@ -1,0 +1,13 @@
+.sec {
+  height: 300vh;
+  border: 1px solid red;
+}
+
+.sun {
+  border-radius: 1px solid blue;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  background-image: url('./img/clear.jpg');
+  background-size: contain;
+}

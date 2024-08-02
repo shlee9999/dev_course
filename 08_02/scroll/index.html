@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>scroll</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      .top_menu {
+        position: fixed;
+        top: 1rem;
+        right: 1rem;
+        display: flex;
+        gap: 1rem;
+        transform: translateY(calc(-100% - 1rem));
+        transition: transform 0.8s;
+      }
+      .top_menu a {
+        padding: 1rem;
+        text-decoration: none;
+        color: white;
+        background-color: black;
+      }
+      .top_menu.on {
+        transform: translateY(0);
+      }
+      .top_menu a:hover,
+      .top_menu a:active,
+      .top_menu a.on {
+        background-color: white !important;
+        color: black;
+      }
+      .goTop {
+        position: fixed;
+        right: 100px;
+        bottom: 100px;
+        background-color: antiquewhite;
+        padding: 1rem;
+      }
+      .sec_con section {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      #sec1 {
+        background-color: tomato;
+      }
+      #sec2 {
+        background-color: teal;
+      }
+      #sec3 {
+        background-color: antiquewhite;
+      }
+      #sec4 {
+        background-color: aliceblue;
+      }
+      #sec5 {
+        background-color: beige;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="top_menu">
+      <a href="#sec1">1번영역</a>
+      <a href="#sec2">2번영역</a>
+      <a href="#sec3">3번영역</a>
+      <a href="#sec4">4번영역</a>
+      <a href="#sec5">5번영역</a>
+    </nav>
+    <a href="#sec1" class="goTop">상단으로</a>
+    <main class="sec_con">
+      <section id="sec1">1번 섹션</section>
+      <section id="sec2">2번 섹션</section>
+      <section id="sec3">3번 섹션</section>
+      <section id="sec4">4번 섹션</section>
+      <section id="sec5">5번 섹션</section>
+    </main>
+    <script>
+      const $sections = [...document.querySelectorAll('.sec_con > section')];
+      let timerId = -1;
+      let isScrolling = false;
+      const scrollToSection = ($section, deltaY) => {
+        if (isScrolling) return;
+        isScrolling = true;
+        const $prevSection = $section.previousElementSibling;
+        const $nextSection = $section.nextElementSibling;
+        deltaY > 0
+          ? window.scrollTo(0, $nextSection?.offsetTop ?? $section.offsetTop)
+          : window.scrollTo(0, $prevSection?.offsetTop ?? $section.offsetTop);
+        timerId = setTimeout(() => {
+          isScrolling = false;
+          clearTimeout(timerId);
+        }, 800);
+      };
+      const onWheel = function (e) {
+        e.preventDefault();
+        const { target, deltaY } = e;
+        if (!target.closest('.sec_con')) return; //wheel 대상이 sec_con의 자식요소인지 확인합니다.
+        const $section = target.closest('.sec_con > section'); // wheel 대상이 section의 자식 요소일 수도 있으므로 해당하는 section으로 $section을 할당
+        //target 요소는 section임
+        scrollToSection($section, deltaY);
+      };
+      document.addEventListener('wheel', onWheel, { passive: false });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,29 @@
+.listCon h2 {
+  cursor: pointer;
+}
+.listCon > li {
+  border: 1px solid red;
+}
+
+.listCon div {
+  max-height: 0;
+  border: 1px solid lightseagreen;
+  overflow: hidden;
+  transition: max-height 10s;
+}
+
+.listCon p {
+  padding: 1rem;
+}
+
+/* .listCon > li:hover, */
+.listcon > li.active {
+  background-color: tomato;
+}
+
+.listCon > li.active div {
+  max-height: 1000px;
+  background-color: tomato;
+}
+
+/* .listCon > li.active div */

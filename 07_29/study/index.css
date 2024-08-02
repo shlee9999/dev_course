@@ -1,0 +1,41 @@
+.sec {
+  position: relative;
+  width: fit-content;
+  margin: auto;
+  border: 1px solid red;
+}
+
+.btnsCon {
+  display: flex;
+}
+
+.btnsCon button {
+  cursor: pointer;
+  padding: 1rem 2rem;
+}
+.btnsCon > li.on button {
+  background-color: rgba(10, 255, 255, 0.1);
+}
+.btnsCon > li:hover button {
+  background-color: rgba(20, 255, 200, 0.5);
+}
+.listCon > li {
+  display: none;
+  height: 200px; /*! 임시 */
+  border: 1px solid lightgray;
+  padding: 1rem;
+}
+
+.sec .bar {
+  width: 105px;
+  height: 10px;
+  background-color: lightcoral;
+  position: absolute;
+  left: 0;
+  top: 0;
+  /* transform: translateX(100px); */
+}
+
+.listCon .on {
+  display: block;
+}

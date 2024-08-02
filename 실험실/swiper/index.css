@@ -1,0 +1,22 @@
+.swiper {
+  margin: 200px auto;
+  width: 500px;
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+}
+
+.swiper-wrap {
+  /* transform */
+  display: flex;
+  gap: 10px;
+  border: 1px solid tomato;
+  width: 90%;
+}
+
+.swiper-slide {
+  height: 300px; /*? 임시 */
+  width: calc(100% / 3);
+  border: 1px solid teal;
+}

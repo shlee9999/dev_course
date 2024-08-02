@@ -1,0 +1,47 @@
+/* section3 */
+.main .section3 {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+
+  max-width: 1440px;
+  margin: 0 auto;
+
+  padding: 148px 104px 104px;
+  overflow: hidden;
+}
+.main .section3 > section {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  width: 50%;
+}
+.main .section3 h2 {
+  position: relative;
+  font-size: var(--font-h2);
+}
+.main .section3 h2::before {
+  position: absolute;
+  content: "";
+  background: linear-gradient(to left bottom, #f76680, #57007b);
+  width: 72px;
+  height: 5px;
+  top: -30px;
+}
+.main .section3 h2 > p:nth-of-type(2) {
+  font-weight: var(--font-bold);
+}
+.main .section3 div:nth-of-type(2) {
+  font-weight: var(--font-bold);
+  color: var(--color-primary-bg);
+}
+.main .section3::before {
+  position: absolute;
+  content: "";
+  background: linear-gradient(to left bottom, #f76680, #57007b);
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  top: -36px;
+  left: 95px;
+}

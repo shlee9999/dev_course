@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>slide</title>
+    <link rel="stylesheet" href="./index.css" />
+    <style></style>
+  </head>
+  <body>
+    <main>
+      <h1>슬라이드 연습</h1>
+      <section class="slide">
+        <div class="slide-wrap">
+          <ul class="sliderUl">
+            <li class="slider">
+              <div>
+                <p>1</p>
+                <img src="./img/clear.jpg" alt="cloudy" />
+              </div>
+            </li>
+            <li class="slider">
+              <div>
+                <p>2</p>
+                <img src="./img/cloudy.jpg" alt="cloudy" />
+              </div>
+            </li>
+            <li class="slider">
+              <div>
+                <p>3</p>
+                <img src="./img/lightrain.jpg" alt="cloudy" />
+              </div>
+            </li>
+            <li class="slider">
+              <div>
+                <p>4</p>
+                <img src="./img/mcloudy.jpg" alt="cloudy" />
+              </div>
+            </li>
+          </ul>
+        </div>
+        <button class="btn prev">이전</button>
+        <button class="btn next">다음</button>
+        <div class="slider-dot">
+          <span>1</span>
+          <span>2</span>
+          <span>3</span>
+          <span>4</span>
+        </div>
+      </section>
+    </main>
+    <script>
+      const $silderUl = document.querySelector('.sliderUl');
+      const $sliderDot = document.querySelector('.slider-dot');
+      const [$prevBtn, $nextBtn] = document.querySelectorAll('.btn');
+      let nowNumber = 1;
+      let nowTransition = 1;
+      let targetNumber = -1;
+      const slidePrev = () =>
+        ($silderUl.style.transform = `translate(calc(100% / 3 * 0), 0)`);
+      const slideNext = () =>
+        ($silderUl.style.transform = `translate(calc(-100% / 3 * 2), 0)`);
+      const setTransition = (second) => {
+        $silderUl.style.transition = `transform ${second}s`;
+      };
+      // const repeatSlide = function (repeatCount, slideFn) {
+      //   setTimeout(() => {
+      //     slideFn();
+      //     repeatSlide(repeatCount, slideFn);
+      //   }, 1 / repeatCount);
+      // };
+      const slide = function (startNumber, endNumber) {
+        diff = startNumber - endNumber;
+        if (!diff) return;
+        setTransition(1 / diff);
+        if (diff > 0) {
+          //prev 방향
+          slidePrev();
+        } else {
+          //next 방향
+        }
+      };
+      $silderUl.prepend($silderUl.lastElementChild);
+      $prevBtn.addEventListener('click', onClickPrevBtn);
+      $nextBtn.addEventListener('click', onClickNextBtn);
+      $silderUl.addEventListener('transitionend', transitionend);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,44 @@
+* {
+  box-sizing: border-box;
+}
+
+.list {
+  position: relative;
+  background-color: tomato;
+  border: 5px solid lightgray;
+  width: 500px;
+  margin: 30px auto;
+  display: flex;
+  gap: 1px;
+  padding: 1px;
+}
+
+.list li {
+  background-color: white;
+  padding: 1rem;
+}
+
+.list span {
+}
+
+.list div {
+  background-color: teal;
+  position: absolute;
+  left: 0;
+  top: 50px;
+  width: 100%;
+  display: none;
+}
+
+.list li:first-of-type div {
+  display: block;
+}
+
+.list li:hover {
+  cursor: pointer;
+  background-color: teal;
+  transition: 0.4s;
+  div {
+    display: block;
+  }
+}

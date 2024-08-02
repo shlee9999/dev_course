@@ -1,0 +1,12 @@
+.con {
+  width: fit-content;
+  margin: 300px auto;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+span {
+  border: 1px solid tomato;
+  width: 100px;
+  height: 100px;
+}

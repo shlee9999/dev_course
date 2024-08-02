@@ -1,0 +1,50 @@
+.hamb-modal {
+  position: fixed;
+  right: 0;
+  top: 0;
+  min-width: 200px;
+  width: 30vw;
+  height: 100vh;
+  background-color: white;
+  z-index: 99999;
+  transition: transform 0.2s ease-in;
+  transform: translateX(100%);
+}
+.modal-wrapper {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 99998;
+}
+.open {
+  /* 위 요소들보다 아래 위치해야 함 */
+  display: block;
+  transform: translateX(0);
+}
+.hamb_modal_close-btn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background-color: transparent;
+}
+.hamb_modal_close-btn > img {
+  width: 15px;
+}
+@media screen and (max-width: 800px) {
+  .hamb-modal {
+    padding: 65px 20px 20px 20px;
+    display: block;
+  }
+  .hamb-modal > .gnb {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .hamb-modal > .gnb a:hover {
+    text-decoration: underline;
+  }
+}

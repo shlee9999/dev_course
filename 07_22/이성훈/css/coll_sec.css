@@ -1,0 +1,49 @@
+section.coll_sec {
+  /* position: relative; */
+}
+section.coll_sec .float_wrap {
+  margin-top: 72px;
+  position: absolute;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 202px;
+  width: 100vw;
+  border-top: 1px solid #e7daed;
+  border-bottom: 1px solid #e7daed;
+  background-color: #f7f7fa;
+}
+.swiper.collSwiper {
+  width: 100%;
+}
+.swiper-wrapper.coll > img {
+  object-fit: none;
+}
+
+.swiper-slide.coll {
+  width: auto;
+  height: auto;
+  /* cursor: pointer; */
+}
+
+.swiper-button-con {
+  position: relative;
+  display: flex;
+  gap: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  top: 30px;
+}
+.swiper-button-next.coll,
+.swiper-button-prev.coll {
+  position: relative;
+  left: auto;
+  right: auto;
+  bottom: auto;
+}
+.swiper-button-next.coll {
+}
+.swiper-button-prev.coll {
+}

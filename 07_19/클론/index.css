@@ -1,0 +1,130 @@
+@charset 'utf-8';
+
+:root {
+  font-size: 16px;
+  --gap1: 10px;
+  --gap3: 50px;
+  --gap5: 70px;
+  --p-color1: #50a4e5;
+  --g1: #333;
+  --g2: #666;
+  --g3: #999;
+  --g4: #eaeaea;
+  --mw: 1400px;
+}
+
+.mw {
+  max-width: var(--mw);
+  width: calc(100% - var(--gap5));
+  margin: auto;
+  top: 0;
+}
+
+/* header start */
+.hd {
+  z-index: 1000;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-bottom: 1px solid var(--g4);
+  /* padding: calc(var(--gap1) * 2); */
+  padding: 0rem 2rem;
+  position: fixed;
+  width: 100%;
+}
+
+.hd nav,
+.hd .sub,
+.hd .gnb,
+.hd .person {
+  display: flex;
+  gap: 0.5rem;
+}
+.hd nav a {
+  display: block;
+  white-space: nowrap;
+}
+.hd nav {
+  justify-content: space-between;
+  align-items: center;
+}
+.hd .gnb {
+  flex: 1;
+}
+.hd .sub {
+  position: absolute;
+  border: 1px solid teal;
+  overflow: hidden;
+}
+.hd nav > * {
+  border: 1px solid red;
+}
+.hd .gnb > li:hover .sub {
+  display: flex;
+  height: 35px;
+}
+
+.hd h1 a {
+  /* logo */
+  border: 1px solid blue;
+  width: 100px;
+  height: 80px;
+  background: url('./img/logo.png') center/contain no-repeat;
+  /*? 커서 포인터 외않되? */
+  color: transparent;
+}
+
+.hd .gnb > li {
+}
+.hd .gnb > li > a {
+  transition: 0.3s;
+  border: 1px solid green;
+  padding: 0 2rem;
+  height: 80px;
+  display: flex;
+  /* padding으로 만들었으므로 아래 속성은 필요없음*/
+  /* justify-content: center; */
+  align-items: center;
+  position: relative;
+}
+
+.hd .gnb > li > a::before {
+  content: '';
+  display: block;
+  width: 5px;
+  height: 8px;
+  border: 1px solid tomato;
+  border-radius: 3px;
+  position: absolute;
+  right: 2rem;
+  top: 50%;
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.hd .gnb > li:hover > a {
+  color: var(--p-color1);
+}
+.gnb:hover::before {
+}
+
+.hd .gnb > li:hover a::before {
+  transform: translateY(-30px);
+  opacity: 1;
+}
+.hd .sub li {
+}
+.hd .sub {
+  height: 0;
+  transition: height 0.3s;
+}
+.hd .sub li {
+}
+.hd .sub a {
+  transition: 0.3s;
+  padding: 0.5rem 1rem;
+}
+
+.hd .sub li:hover a {
+  color: var(--p-color1);
+}
+
+/*! 임시 */

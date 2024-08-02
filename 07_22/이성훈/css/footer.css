@@ -1,0 +1,9 @@
+footer {
+  margin-top: 81px;
+  height: 87px;
+  border-top: 1px solid var(--gray-4);
+  text-align: center;
+  font-size: 14;
+  line-height: 85px;
+  color: var(--gray-7);
+}

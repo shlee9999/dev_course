@@ -1,0 +1,65 @@
+.banner_sec {
+  font-weight: 300;
+  font-size: 45px;
+  line-height: 71px;
+  display: flex;
+  height: 561px;
+  position: relative;
+  background: url('../img/banner.svg') no-repeat;
+  background-position: right center;
+  background-size: contain;
+}
+.banner_sec p {
+  font-size: 53px;
+  font-weight: 900;
+}
+
+.banner_sec > p {
+  margin-top: 28px;
+  color: var(--gray-7);
+  font-size: 18px;
+  line-height: 36px;
+  font-weight: 400;
+  max-width: 550px;
+}
+.main-start-btn {
+  margin-top: 75px;
+  font-size: 14px;
+  line-height: 1;
+  padding: 19px 30px;
+  transition: 0.2s;
+}
+.main-start-btn:hover {
+  /* 어둡게 */
+  background-color: var(--p-light);
+}
+.banner_sec {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+}
+.banner_sec > h2 {
+  /* white-space: nowrap; */
+  max-width: 600px;
+}
+.banner_sec {
+}
+
+@media screen and (max-width: 800px) {
+  .banner_sec {
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 200px;
+    background-size: cover;
+  }
+  .main-start-btn {
+    width: 90%;
+  }
+  .banner_sec > p {
+    display: none;
+  }
+}

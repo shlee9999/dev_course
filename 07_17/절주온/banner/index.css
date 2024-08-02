@@ -1,0 +1,42 @@
+main {
+  border: 5px solid lightgray;
+  max-width: 1200px;
+  width: calc(100% - 4rem);
+  margin: auto;
+}
+main > * {
+  border: 1px solid red;
+}
+.banner {
+  box-sizing: border-box;
+  position: relative;
+  padding: 20px;
+  width: calc(100% / 3);
+  height: 165px;
+  background-color: #7260c5;
+  border-radius: 20px;
+  color: white;
+}
+.banner > h2 {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.banner > h2 > p {
+  font-weight: 500;
+}
+.banner::before,
+.banner::after {
+  position: absolute;
+}
+.banner::after {
+  content: '';
+  right: 40px;
+  top: 50%;
+  transform: translate(0, -50%);
+  width: 100px;
+  height: 100px;
+  background-image: url('./bg_alcohol.png');
+  background-position: center;
+  background-size: contain;
+}
